@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1852767F1EF28EBD0076A3B4 /* KeyFrameAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1852767E1EF28EBD0076A3B4 /* KeyFrameAnimationController.m */; };
+		18636F761EF3798A00853556 /* BasicKeyFrameAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18636F751EF3798A00853556 /* BasicKeyFrameAnimationController.m */; };
 		18A329171EE4FE9B0080FF13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A329161EE4FE9B0080FF13 /* main.m */; };
 		18A3291A1EE4FE9B0080FF13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A329191EE4FE9B0080FF13 /* AppDelegate.m */; };
 		18A3291D1EE4FE9B0080FF13 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3291C1EE4FE9B0080FF13 /* ViewController.m */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1852767D1EF28EBD0076A3B4 /* KeyFrameAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyFrameAnimationController.h; sourceTree = "<group>"; };
+		1852767E1EF28EBD0076A3B4 /* KeyFrameAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyFrameAnimationController.m; sourceTree = "<group>"; };
+		18636F741EF3798A00853556 /* BasicKeyFrameAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicKeyFrameAnimationController.h; sourceTree = "<group>"; };
+		18636F751EF3798A00853556 /* BasicKeyFrameAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicKeyFrameAnimationController.m; sourceTree = "<group>"; };
 		18A329121EE4FE9B0080FF13 /* 基本动画_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "基本动画_test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A329161EE4FE9B0080FF13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18A329181EE4FE9B0080FF13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +111,10 @@
 				18A329191EE4FE9B0080FF13 /* AppDelegate.m */,
 				18A3291B1EE4FE9B0080FF13 /* ViewController.h */,
 				18A3291C1EE4FE9B0080FF13 /* ViewController.m */,
+				1852767D1EF28EBD0076A3B4 /* KeyFrameAnimationController.h */,
+				1852767E1EF28EBD0076A3B4 /* KeyFrameAnimationController.m */,
+				18636F741EF3798A00853556 /* BasicKeyFrameAnimationController.h */,
+				18636F751EF3798A00853556 /* BasicKeyFrameAnimationController.m */,
 				18A3291E1EE4FE9B0080FF13 /* Main.storyboard */,
 				18A329211EE4FE9B0080FF13 /* Assets.xcassets */,
 				18A329231EE4FE9B0080FF13 /* LaunchScreen.storyboard */,
@@ -273,6 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18636F761EF3798A00853556 /* BasicKeyFrameAnimationController.m in Sources */,
+				1852767F1EF28EBD0076A3B4 /* KeyFrameAnimationController.m in Sources */,
 				18A3291D1EE4FE9B0080FF13 /* ViewController.m in Sources */,
 				18A3291A1EE4FE9B0080FF13 /* AppDelegate.m in Sources */,
 				18A329171EE4FE9B0080FF13 /* main.m in Sources */,
@@ -509,6 +521,7 @@
 				18A329411EE4FE9C0080FF13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18A329421EE4FE9C0080FF13 /* Build configuration list for PBXNativeTarget "基本动画_testTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +530,7 @@
 				18A329441EE4FE9C0080FF13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18A329451EE4FE9C0080FF13 /* Build configuration list for PBXNativeTarget "基本动画_testUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +539,7 @@
 				18A329471EE4FE9C0080FF13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

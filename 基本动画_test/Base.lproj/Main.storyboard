@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ky8-ye-v9h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ky8-ye-v9h">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--CAKeyframeAnimation-->
         <scene sceneID="loB-hs-529">
             <objects>
-                <viewController id="mGz-vd-JXR" sceneMemberID="viewController">
+                <viewController id="mGz-vd-JXR" customClass="KeyFrameAnimationController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GCx-Pd-Tec"/>
                         <viewControllerLayoutGuide type="bottom" id="JtV-S8-qOA"/>
@@ -20,13 +20,200 @@
                     <view key="view" contentMode="scaleToFill" id="mVv-c0-Ltb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0F-Dh-zWa">
+                                <rect key="frame" x="52" y="53" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="关键帧基本动画"/>
+                                <connections>
+                                    <action selector="basicKeyFrameAnimation" destination="mGz-vd-JXR" eventType="touchUpInside" id="rRJ-Ql-iO0"/>
+                                    <segue destination="anb-NB-cDK" kind="presentation" id="1VT-XU-wD5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pw5-YZ-7Yq">
+                                <rect key="frame" x="52" y="127" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="弹簧动画"/>
+                                <connections>
+                                    <action selector="springAnimation" destination="mGz-vd-JXR" eventType="touchUpInside" id="e4P-FK-oxN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVd-qC-rUs">
+                                <rect key="frame" x="52" y="198" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="转场动画"/>
+                                <connections>
+                                    <action selector="transitionAnimation" destination="mGz-vd-JXR" eventType="touchUpInside" id="F9C-fS-lIE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEP-mt-Glw">
+                                <rect key="frame" x="52" y="286" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="动画样例"/>
+                                <connections>
+                                    <action selector="animationExample" destination="mGz-vd-JXR" eventType="touchUpInside" id="YEA-2s-MLR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="CAKeyframeAnimation" id="AeI-ET-bnU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12A-WO-29Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-647" y="-81"/>
+            <point key="canvasLocation" x="-647.20000000000005" y="-81.409295352323838"/>
+        </scene>
+        <!--Basic Key Frame Animation Controller-->
+        <scene sceneID="eaN-lm-NgB">
+            <objects>
+                <viewController id="anb-NB-cDK" customClass="BasicKeyFrameAnimationController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jTn-oP-pIJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="nqc-Uu-2rw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bED-ee-x42">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKr-LE-as7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXy-MW-Hhn">
+                                        <rect key="frame" x="20" y="20" width="64" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="KFX-Em-Dj6"/>
+                                        </constraints>
+                                        <state key="normal" title="返回">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissController" destination="anb-NB-cDK" eventType="touchUpInside" id="SHF-MH-CMb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="lXy-MW-Hhn" secondAttribute="bottom" id="M3Z-1Z-dHj"/>
+                                    <constraint firstItem="lXy-MW-Hhn" firstAttribute="leading" secondItem="AKr-LE-as7" secondAttribute="leading" constant="20" id="WkB-tA-C0V"/>
+                                    <constraint firstItem="lXy-MW-Hhn" firstAttribute="top" secondItem="AKr-LE-as7" secondAttribute="top" constant="20" id="dwe-eY-MpO"/>
+                                    <constraint firstAttribute="height" constant="64" id="epV-lf-hYV"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYo-uY-7e6">
+                                <rect key="frame" x="16" y="101" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="椭圆Path"/>
+                                <connections>
+                                    <action selector="椭圆" destination="anb-NB-cDK" eventType="touchUpInside" id="9m4-ZH-EXS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skB-Fo-JXM">
+                                <rect key="frame" x="140" y="101" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="贝塞尔矩形"/>
+                                <connections>
+                                    <action selector="贝塞尔矩形" destination="anb-NB-cDK" eventType="touchUpInside" id="Tpb-lm-i0G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idr-JS-RPN">
+                                <rect key="frame" x="262" y="101" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="贝塞尔抛物线"/>
+                                <connections>
+                                    <action selector="贝塞尔抛物线:" destination="anb-NB-cDK" eventType="touchUpInside" id="vKO-2P-cde"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heL-g5-pKn">
+                                <rect key="frame" x="16" y="139" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="贝塞尔圆"/>
+                                <connections>
+                                    <action selector="贝塞尔圆:" destination="anb-NB-cDK" eventType="touchUpInside" id="rpF-Jc-gqI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTO-yi-BiZ">
+                                <rect key="frame" x="262" y="139" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="贝塞尔s曲线"/>
+                                <connections>
+                                    <action selector="贝塞尔s曲线:" destination="anb-NB-cDK" eventType="touchUpInside" id="Htn-hl-tKc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLT-Bc-j8T">
+                                <rect key="frame" x="141" y="139" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="弹力仿真"/>
+                                <connections>
+                                    <action selector="弹力仿真:" destination="anb-NB-cDK" eventType="touchUpInside" id="5Ri-m6-fhi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IJ-NG-306">
+                                <rect key="frame" x="16" y="177" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="自晃动"/>
+                                <connections>
+                                    <action selector="自晃动:" destination="anb-NB-cDK" eventType="touchUpInside" id="dsm-9m-27V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dV0-Kc-3Pn">
+                                <rect key="frame" x="140" y="177" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="指定点平移"/>
+                                <connections>
+                                    <action selector="指定点平移:" destination="anb-NB-cDK" eventType="touchUpInside" id="dTe-c8-K5T"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mfv-Ag-5PX">
+                                <rect key="frame" x="162" y="231" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDN-Bo-QsG">
+                                        <rect key="frame" x="15" y="0.0" width="21" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvd-iJ-IcH">
+                                <rect key="frame" x="262" y="177" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="颜色渐变"/>
+                                <connections>
+                                    <action selector="颜色渐变:" destination="anb-NB-cDK" eventType="touchUpInside" id="5wl-91-o49"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AKr-LE-as7" firstAttribute="leading" secondItem="bED-ee-x42" secondAttribute="leading" id="5ZE-XJ-IOc"/>
+                            <constraint firstAttribute="trailing" secondItem="AKr-LE-as7" secondAttribute="trailing" id="N8e-7Z-QBI"/>
+                            <constraint firstItem="AKr-LE-as7" firstAttribute="top" secondItem="bED-ee-x42" secondAttribute="top" id="nwX-f6-9Ns"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="c0V-Lz-cuC"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="animatinView" destination="Mfv-Ag-5PX" id="8cv-Oe-gDm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0NU-J6-3er" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.59999999999999" y="-77.811094452773617"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Bqs-Yz-pMW">
