@@ -216,24 +216,7 @@
     [self.animatinView.layer addAnimation:animation forKey:nil];
     
 }
-- (IBAction)颜色渐变:(id)sender {
-    
-    NSLog(@"颜色渐变");
-    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"backgroundColor"];
-    
-    NSArray *colors = @[self.animatinView.backgroundColor,[UIColor brownColor],[UIColor redColor],[UIColor blueColor],[UIColor cyanColor]];
-    
-    [animation setValues:colors];
-    [animation setDuration:4.0];
-    
-    [animation setRemovedOnCompletion:YES];
-    [animation setFillMode:kCAFillModeBoth];
-    
-    [animation setRotationMode:kCAAnimationRotateAutoReverse];
-    
-    [self.animatinView.layer addAnimation:animation forKey:nil];
-    
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
